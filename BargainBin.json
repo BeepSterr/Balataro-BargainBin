@@ -1,0 +1,13 @@
+{
+    "id": "",
+    "name": "Bargain Bin",
+    "author": ["Beepsterr"],
+    "description": "The bottom of the laugh barrel. ",
+    "prefix": "beepsterr_bargainbin",
+    "main_file": "init.lua",
+    "badge_colour": "9191c9",
+    "dependencies": [
+        "Steamodded (>=1.*)"
+    ],
+    "version": "0.0.1"
+}

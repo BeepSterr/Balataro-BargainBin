@@ -1,0 +1,37 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 100
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''
+        G.GAME.current_round.hands_left = G.GAME.current_round.hands_left + mod
+        hand_UI.config.object:update()
+        G.HUD:recalculate()
+'''
+match_indent = true
+position = 'after'
+payload = '''
+for i = 1, #G.jokers.cards do
+    G.jokers.cards[i]:calculate_joker({hand_count_changed = true, blind = G.GAME.round_resets.blind})
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''
+        G.GAME.current_round.discards_left = G.GAME.current_round.discards_left + mod
+        --Popup text next to the chips in UI showing number of chips gained/lost
+        discard_UI.config.object:update()
+        G.HUD:recalculate()
+'''
+match_indent = true
+position = 'after'
+payload = '''
+for i = 1, #G.jokers.cards do
+    G.jokers.cards[i]:calculate_joker({discard_count_changed = true, blind = G.GAME.round_resets.blind})
+end
+'''
