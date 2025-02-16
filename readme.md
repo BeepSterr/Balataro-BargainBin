@@ -1,6 +1,8 @@
 # Bargain Bin
 a balatro mod that adds jokers (wow)
 
+[List of Jokers & WIP Jokers](https://beeps.notion.site/Beep-s-Balatro-Bargain-Bin-198f258220598027b8e2f94c8912f333?pvs=74)
+
 ### a quick warning
 don't download this yet lmao its more unfinished than my laundry
 
