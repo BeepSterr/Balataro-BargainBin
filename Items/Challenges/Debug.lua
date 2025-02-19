@@ -13,10 +13,11 @@ if beepsterr.bargainbin.debug then
         --    }
         --},
         jokers = {
-            { id = "j_beepsterr_bargainbin_izanagis" },
-            { id = "j_burglar" },
-            { id = 'j_troubadour' },
-            { id = 'j_drunkard' },
+            --{ id = "j_beepsterr_bargainbin_izanagis" },
+            --{ id = "j_burglar" },
+            --{ id = 'j_troubadour' },
+            --{ id = 'j_drunkard' },
+            { id = 'j_beepsterr_bargainbin_nightguard' },
         },
         deck = {
             type = "Challenge Deck"

@@ -20,7 +20,7 @@ SMODS.Joker {
         if context.joker_main and not context.blueprint then
 
             if G.GAME.dollars > card.ability.extra.cost then
-                G.GAME.dollars = G.GAME.dollars - card.ability.extra.cost
+                card.ability.extra.cost(-card.ability.extra.cost)
                 return {
                     chip_mod = card.ability.extra.chips,
                 }

@@ -22,8 +22,11 @@ assert(SMODS.load_file('Items/Jokers/CollegeFund.lua'))()
 assert(SMODS.load_file('Items/Jokers/GuestPass.lua'))()
 assert(SMODS.load_file('Items/Jokers/Timeout.lua'))()
 assert(SMODS.load_file('Items/Jokers/Izanagis.lua'))()
+--assert(SMODS.load_file('Items/Jokers/Nightguard.lua'))()
+assert(SMODS.load_file('Items/Jokers/Slotmachine.lua'))()
 
 -- CHALLENGES
 assert(SMODS.load_file('Items/Challenges/Timeout.lua'))()
 assert(SMODS.load_file('Items/Challenges/Ascendant.lua'))()
+assert(SMODS.load_file('Items/Challenges/PureChance.lua'))()
 assert(SMODS.load_file('Items/Challenges/Debug.lua'))()

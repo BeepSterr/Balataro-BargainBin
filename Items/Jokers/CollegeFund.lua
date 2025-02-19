@@ -21,7 +21,7 @@ SMODS.Joker {
         if context.setting_blind and not context.blueprint then
 
             if G.GAME.dollars >= card.ability.extra.cost then
-                G.GAME.dollars = G.GAME.dollars - card.ability.extra.cost
+                ease_dollars(-card.ability.extra.cost)
                 card.ability.extra_value = card.ability.extra_value + card.ability.extra.increment_amount
                 card:set_cost();
 
