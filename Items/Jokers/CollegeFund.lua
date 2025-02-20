@@ -1,12 +1,5 @@
 SMODS.Joker {
 	key = 'college_fund',
-	loc_txt = {
-		name = 'College Fund',
-		text = {
-			"When blind is selected {C:attention}-$#1#{}",
-			"and add {C:attention}$#2#{} to sell value",
-		}
-	},
 	rarity = 2,
 	atlas = 'Jokers',
 	blueprint_compat = false,

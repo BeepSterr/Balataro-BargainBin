@@ -1,12 +1,5 @@
 SMODS.Joker {
 	key = 'overflow',
-	loc_txt = {
-		name = 'Overflow',
-		text = {
-			"Increase {C:attention}rank{} of",
-			"all scored cards"
-		}
-	},
 	config = {},
 	rarity = 1,
 	atlas = 'Jokers',

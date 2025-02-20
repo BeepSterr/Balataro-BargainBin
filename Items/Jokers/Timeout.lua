@@ -1,13 +1,5 @@
 SMODS.Joker {
 	key = 'timeout',
-	loc_txt = {
-		name = 'Timeout',
-		text = {
-			"{C:chips}+#1#{} chips, reduced by {C:chips}#2#{} chips each second",
-			"gains {C:chips}+#3#{} chips when {C:attention}blind is selected{}",
-			"{S:1.1,C:red,E:2}self destructs when chips reach 0{}"
-		}
-	},
 	rarity = 3,
 	atlas = 'Jokers',
 	blueprint_compat = true,

@@ -1,11 +1,5 @@
 SMODS.Joker {
 	key = 'vbucks',
-	loc_txt = {
-		name = 'V-Bucks Card',
-		text = {
-			"{C:attention}-#1#{} and {C:chips}+#2#{} Chips",
-		}
-	},
 	rarity = 1,
 	atlas = 'Jokers',
 	blueprint_compat = false,

@@ -1,13 +1,5 @@
 SMODS.Joker {
 	key = 'guest_pass',
-	loc_txt = {
-		name = 'Guest Pass',
-		text = {
-			"{C:mult}+#1#{} Mult for each scored {C:attention}face card{}",
-			"{C:mult}-#1#{} Mult for each scored {C:attention}numbered card{}",
-			"{C:inactive}(Currently {}{C:mult}+#2#{}{C:inactive}){}"
-		}
-	},
 	rarity = 2,
 	atlas = 'Jokers',
 	blueprint_compat = true,

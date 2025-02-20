@@ -1,7 +1,8 @@
 -- TODO: Figure out pools
 SMODS.Rarity{
     key = "exotic",
-    loc_txt = {},
+    loc_txt = { name = "exotic" },
+    default_weight = 0,
     pools = {
         ["Joker"] = false
     },

@@ -1,12 +1,5 @@
 SMODS.Joker {
 	key = 'egg_basket',
-	loc_txt = {
-		name = 'Egg Basket',
-		text = {
-			"Upgrade level of played poker hand",
-			"Downgrade level of random poker hand",
-		}
-	},
 	rarity = 2,
 	atlas = 'Jokers',
 	blueprint_compat = false,

@@ -1,14 +1,5 @@
 SMODS.Joker {
 	key = 'izanagis',
-	loc_txt = {
-		name = "Izanagi's Burden",
-		text = {
-            "After {C:attention}Blind{} is selected",
-            "Lose all {C:mult}Discards{} and all but 1 {C:chips}Hand{}",
-            "{X:mult,C:white} X1 {} per consumed hand and discard this blind",
-            "{C:inactive}(Currently {X:mult,C:white} X#1# {}{C:inactive}){}",
-		}
-	},
 	rarity = 3,
 	atlas = 'Jokers',
 	blueprint_compat = true,
