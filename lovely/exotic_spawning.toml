@@ -1,0 +1,31 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = -1
+
+# Joker Layers Patch
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''
+local _card_to_spawn = booster_obj:create_card(self, i)
+if type((_card_to_spawn or {}).is) == 'function' and _card_to_spawn:is(Card) then
+    card = _card_to_spawn
+else
+    card = SMODS.create_card(_card_to_spawn)
+end
+'''
+match_indent = true
+position = "at"
+payload = '''
+if pseudorandom('exotic_engram_rate', 1, 100) >= 95 then
+    card = create_card("beepsterr_Engram", G.pack_cards, false, nil, true, false, nil, 'buf')
+else
+    local _card_to_spawn = booster_obj:create_card(self, i)
+    if type((_card_to_spawn or {}).is) == 'function' and _card_to_spawn:is(Card) then
+        card = _card_to_spawn
+    else
+        card = SMODS.create_card(_card_to_spawn)
+    end
+end
+'''

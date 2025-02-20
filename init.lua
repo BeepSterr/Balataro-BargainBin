@@ -10,7 +10,7 @@ beepsterr.bargainbin.util = beepsterr.bargainbin.util or {}
 beepsterr.bargainbin.debug = true
 
 -- Start loading mod content
-assert(SMODS.load_file('Items/Loader.lua'))()
+assert(SMODS.load_file('loader.lua'))()
 
 
 beepsterr.rendering = {}

@@ -24,6 +24,9 @@ assert(SMODS.load_file('Items/Jokers/Timeout.lua'))()
 assert(SMODS.load_file('Items/Jokers/Izanagis.lua'))()
 assert(SMODS.load_file('Items/Jokers/Slotmachine.lua'))()
 
+-- CONSUMABLES
+assert(SMODS.load_file('Items/Consumables/ExoticEngram.lua'))()
+
 -- CHALLENGES
 assert(SMODS.load_file('Items/Challenges/Timeout.lua'))()
 assert(SMODS.load_file('Items/Challenges/Ascendant.lua'))()
