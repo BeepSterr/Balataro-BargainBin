@@ -17,15 +17,18 @@ assert(SMODS.load_file('Items/Rarities/Exotic.lua'))()
 -- JOKERS
 assert(SMODS.load_file('Items/Jokers/Overflow.lua'))()
 assert(SMODS.load_file('Items/Jokers/Vbucks.lua'))()
-assert(SMODS.load_file('Items/Jokers/EggBasket.lua'))()
+assert(SMODS.load_file('Items/Jokers/RocheLimit.lua'))()
 assert(SMODS.load_file('Items/Jokers/CollegeFund.lua'))()
 assert(SMODS.load_file('Items/Jokers/GuestPass.lua'))()
 assert(SMODS.load_file('Items/Jokers/Timeout.lua'))()
 assert(SMODS.load_file('Items/Jokers/Izanagis.lua'))()
 assert(SMODS.load_file('Items/Jokers/Slotmachine.lua'))()
+assert(SMODS.load_file('Items/Jokers/BlinkTwice.lua'))()
+assert(SMODS.load_file('Items/Jokers/BalancingAct.lua'))()
 
 -- CONSUMABLES
-assert(SMODS.load_file('Items/Consumables/ExoticEngram.lua'))()
+-- TODO: Implement more "Exotics" and use the Engrams to obtain them (like Destiny 2)
+--assert(SMODS.load_file('Items/Consumables/ExoticEngram.lua'))()
 
 -- CHALLENGES
 assert(SMODS.load_file('Items/Challenges/Timeout.lua'))()

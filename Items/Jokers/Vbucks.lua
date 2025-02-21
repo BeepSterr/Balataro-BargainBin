@@ -19,11 +19,7 @@ SMODS.Joker {
                     chip_mod = card.ability.extra.chips,
                 }
             else
-                return {
-                    message = "Broke!",
-                    colour = G.C.JOKER_GREY,
-                    card = card
-                }
+                return
             end
 
         end

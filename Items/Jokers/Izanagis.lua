@@ -13,8 +13,6 @@ SMODS.Joker {
 
 	    local function consumeHandsAndDiscards()
 
-	        print("Consuming hands and discards")
-
             local hands_left = G.GAME.current_round.hands_left;
             local discards_left = G.GAME.current_round.discards_left;
             local previous_xmult = card.ability.extra.x_mult;

@@ -34,15 +34,13 @@ SMODS.Joker {
             end
 
             if mult_delta > 0 then
-                card:juice_up(0.3, 0.3)
-                card_eval_status_text(card, 'extra', nil, nil, nil,
-                    { message = "Gained " .. mult_delta, colour = G.C.MULT })
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        card_eval_status_text(card, 'extra', nil, nil, nil, {message = localize('k_upgrade_ex')}); return true
+                    end
+                }))
             end
-            if mult_delta < 0 then
-                card:juice_up(0.3, 0.3)
-                card_eval_status_text(card, 'extra', nil, nil, nil,
-                    { message = "Lost " .. mult_delta, colour = G.C.JOKER_GREY })
-            end
+
             -- no case for 0 mult change because we don't need to display that
 
             -- Reset mult if it goes below 0
@@ -50,11 +48,14 @@ SMODS.Joker {
                 card.ability.extra.current_mult = 0
             end
 
-            return {
-                message = "+" .. card.ability.extra.current_mult,
-                mult_mod = card.ability.extra.current_mult,
-                colour = G.C.MULT,
-            }
+            if card.ability.extra.current_mult > 0 then
+
+                return {
+                    mult_mod = card.ability.extra.current_mult,
+                    colour = G.C.MULT,
+                }
+
+            end
 
         end
 	end

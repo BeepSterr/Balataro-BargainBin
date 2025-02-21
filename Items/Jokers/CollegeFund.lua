@@ -26,11 +26,7 @@ SMODS.Joker {
                 }
 
             else
-                return {
-                    message = "Broke!",
-                    colour = G.C.JOKER_GREY,
-                    card = card
-                }
+                return
             end
 
         end

@@ -1,5 +1,5 @@
 SMODS.Joker {
-	key = 'egg_basket',
+	key = 'roche_limit',
 	rarity = 2,
 	atlas = 'Jokers',
 	blueprint_compat = false,
@@ -20,11 +20,7 @@ SMODS.Joker {
 
             local picked_hand = pseudorandom_element(available_hands, pseudoseed('nihility'))
             if not picked_hand then
-                return {
-                    message = "Nope!",
-                    colour = G.C.JOKER_GREY,
-                    card = card
-                }
+                return
             end
 
             G.GAME.hands[picked_hand].level = G.GAME.hands[picked_hand].level - 1
@@ -33,7 +29,7 @@ SMODS.Joker {
             --card_eval_status_text(card, 'extra', nil, nil, nil, {message = "Upgraded " .. context.scoring_name, colour = G.C.CHIPS, delay = 3})
 
             return {
-                card = self,
+                card = card,
                 level_up = true,
                 message = localize('k_level_up_ex')
             }

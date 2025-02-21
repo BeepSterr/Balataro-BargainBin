@@ -38,8 +38,9 @@ SMODS.Joker {
 	rarity = 3,
 	blueprint_compat = false,
 	atlas = 'Jokers',
-	pos = { x = 4, y = 0 },
+	pos = { x = 5, y = 1 },
 	cost = 0,
+	blueprint_compat = true,
     config = {
         re_rollable = true,
         layers = {
@@ -93,11 +94,20 @@ SMODS.Joker {
             }))
         end
 
-        if card.ability.extra.slot_1_value == card.ability.extra.slot_2_value and card.ability.extra.slot_2_value == card.ability.extra.slot_3_value then
-            ease_dollars(100)
-            card_eval_status_text(card, 'extra', nil, nil, nil, {message = "Jackpot!", colour = G.C.MONEY})
-            play_sound('gold_seal', percent);
-        end
+         -- Jackpot! (= event because it would trigger before rolling was complete)
+        G.E_MANAGER:add_event(Event({
+            trigger = "after",
+            delay = 0.1,
+            func = function()
+                if card.ability.extra.slot_1_value == card.ability.extra.slot_2_value and card.ability.extra.slot_2_value == card.ability.extra.slot_3_value then
+                    ease_dollars(100)
+                    card_eval_status_text(card, 'extra', nil, nil, nil, {message = "Jackpot!", colour = G.C.MONEY})
+                    play_sound('gold_seal', percent);
+                end
+                return true
+            end
+        }))
+
 
     end,
 

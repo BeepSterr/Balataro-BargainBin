@@ -1,16 +1,13 @@
 return {
     misc={
         challenge_names = {
-            overflow_challenge = "Desynced",
-            timer_challenge = "Speedrun",
-            pure_chance = "Pure Chance"
+            c_beepsterr_bargainbin_overflow_challenge = "Desynced",
+            c_beepsterr_bargainbin_timer_challenge = "Double Time",
+            c_beepsterr_bargainbin_pure_chance = "Pure Chance",
         },
         labels = {
             k_exotic = "Exotic",
         },
-        labels = {
-             k_exotic = "Exotic",
-         }
     },
     descriptions = {
         Back={},
@@ -71,8 +68,8 @@ return {
                     "and add {C:attention}$#2#{} to sell value",
                 },
             },
-            j_beepsterr_bargainbin_egg_basket = {
-                name = 'Egg Basket',
+            j_beepsterr_bargainbin_roche_limit = {
+                name = 'Roche Limit',
                 text = {
                     "Upgrade level of played poker hand",
                     "Downgrade level of random poker hand",
@@ -108,6 +105,16 @@ return {
                     "{C:chips}+#1#{} chips, reduced by {C:chips}#2#{} chips each second",
                     "gains {C:chips}+#3#{} chips when {C:attention}blind is selected{}",
                     "{S:1.1,C:red,E:2}self destructs when chips reach 0{}"
+                }
+            },
+            j_beepsterr_bargainbin_balancing_act = {
+                name = 'Balancing Act',
+                text = {
+                    "{X:mult,C:white}x#1#{} Mult decreased by {X:mult,C:white}x0.1{}",
+                    "for the difference between the {C:important}most played suit{}",
+                    "and the least {C:important}played suit{}",
+                    "Currently played: {C:hearts}#3#{}, {C:diamonds}#4#{}, {C:clubs}#5#{}, {C:spades}#6#{} cards",
+                    "{C:inactive}(Currently {X:mult,C:white}x#2#{}{C:inactive}){}"
                 }
             },
             j_beepsterr_bargainbin_vbucks = {

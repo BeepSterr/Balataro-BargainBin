@@ -63,7 +63,11 @@ beepsterr.bargainbin.util.setup_card_layers = function(self)
                 self.children['layer_' .. k].states.click.can = false
                 self.children['layer_' .. k].no_draw = true
                 self.children['layer_' .. k].role.draw_major = self
-                self.children['layer_' .. k]:draw_shader('dissolve',0, nil, nil, self.children.center,0, 0,nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL),nil, 0.6)
+                self.children['layer_' .. k].scale = {x = self.children['layer_' .. k].scale.x * 2, y = self.children['layer_' .. k].scale.y * 2}
+
+                if v.atlas.s ~= false then
+                    self.children['layer_' .. k]:draw_shader('dissolve',0, nil, nil, self.children.center,0, 0,nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL),nil, 0.6)
+                end
                 self.children['layer_' .. k]:draw_shader('dissolve', nil, nil, nil, self.children.center, 0, 0)
 
                 -- insert for cleanup next frame
