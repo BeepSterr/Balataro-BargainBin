@@ -20,7 +20,7 @@ jobs:
           zip -r dist.zip . -x "*.git*" "*.idea*" "lovely_disabled/*" "assets/dev/*"
 
       - name: Upload zip as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-zip
           path: dist.zip
