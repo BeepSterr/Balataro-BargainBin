@@ -36,8 +36,12 @@ jobs:
         if: steps.version_check.outputs.version_changed == 'true'
         uses: softprops/action-gh-release@v1
         with:
+          files: |
+              /*
           tag_name: v${{ env.VERSION }}
           name: Release v${{ env.VERSION }}
+          fail_on_unmatched_files: true
+          draft: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
