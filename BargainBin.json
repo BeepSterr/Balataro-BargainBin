@@ -1,5 +1,5 @@
 {
-    "id": "",
+    "id": "bargainbin",
     "name": "Bargain Bin",
     "author": ["Beepsterr"],
     "description": "The bottom of the laugh barrel. ",
@@ -9,5 +9,5 @@
     "dependencies": [
         "Steamodded (>=1.*)"
     ],
-    "version": "0.0.1"
+    "version": "1.0.2"
 }

@@ -14,8 +14,9 @@ SMODS.Joker {
         if context.joker_main and not context.blueprint then
 
             if G.GAME.dollars > card.ability.extra.cost then
-                card.ability.extra.cost(-card.ability.extra.cost)
+                ease_dollars(-card.ability.extra.cost)
                 return {
+                    message = "Card Swiped!",
                     chip_mod = card.ability.extra.chips,
                 }
             else

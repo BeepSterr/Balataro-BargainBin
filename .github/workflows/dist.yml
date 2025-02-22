@@ -1,0 +1,26 @@
+name: Create dist zip
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install zip
+        run: sudo apt-get install zip
+
+      - name: Create zip excluding certain directories and files
+        run: |
+          zip -r dist.zip . -x "*.git*" "*.idea*" "lovely_disabled/*" "assets/dev/*"
+
+      - name: Upload zip as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-zip
+          path: dist.zip
