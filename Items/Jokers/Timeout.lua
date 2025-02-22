@@ -1,6 +1,6 @@
 SMODS.Joker {
 	key = 'timeout',
-	rarity = 3,
+	rarity = 2,
 	atlas = 'Jokers',
 	blueprint_compat = true,
 	eternal_compat = true,

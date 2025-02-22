@@ -1,10 +1,10 @@
 SMODS.Joker {
 	key = 'college_fund',
-	rarity = 2,
+	rarity = 1,
 	atlas = 'Jokers',
 	blueprint_compat = false,
 	pos = { x = 3, y = 0 },
-	cost = 6,
+	cost = 0,
     config = { extra = { cost = 5, increment_amount = 6 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.cost, card.ability.extra.increment_amount } }

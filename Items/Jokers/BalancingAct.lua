@@ -15,7 +15,7 @@ SMODS.Joker {
     --        '#1# (#2#) - #3#, #4#, #5#, #6#'
     --    }
     --},
-	cost = 4,
+	cost = 6,
 	atlas = 'Jokers',
 	blueprint_compat = false,
 	pos = { x = 1, y = 1 },

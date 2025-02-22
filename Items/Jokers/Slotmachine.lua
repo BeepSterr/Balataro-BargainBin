@@ -39,7 +39,7 @@ SMODS.Joker {
 	blueprint_compat = false,
 	atlas = 'Jokers',
 	pos = { x = 5, y = 1 },
-	cost = 0,
+	cost = 10,
 	blueprint_compat = true,
     config = {
         re_rollable = true,
