@@ -1,17 +1,40 @@
-name: Create dist zip
+name: Create Release
 
 on:
   push:
     branches:
       - master
+    paths:
+      - 'BargainBin.json'  # This ensures the workflow only runs if BargainBin.json changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensures we fetch all history for all branches and tags
+
+      - name: Check for version change
+        id: version_check
+        run: |
+          OLD_VERSION=$(git tag --sort=-v:refname | grep -o 'v[0-9]*\.[0-9]*\.[0-9]*' | head -n 1 | cut -c 2-)
+          NEW_VERSION=$(jq -r '.version' BargainBin.json)
+          if [ "$OLD_VERSION" != "$NEW_VERSION" ]; then
+            echo "::set-output name=version_changed::true"
+            echo "VERSION=$NEW_VERSION" >> $GITHUB_ENV
+          fi
+
+      - name: Create Release
+        if: steps.version_check.outputs.version_changed == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: Release v${{ env.VERSION }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Remove unwanted directories
         run: |
